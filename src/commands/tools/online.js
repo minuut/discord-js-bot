@@ -3,12 +3,13 @@ const axios = require('axios');
 
 module.exports = {
     data: new SlashCommandBuilder() 
-    .setName('onlineCount')
-    .setDescription('return online count from API'),
+    .setName('online')
+    .setDescription('return online count API'),
 
-    async execute(message, args, rest) {
-        try {                             //   put your api url here
-            const response = await axios.get('                      ');
+    async execute(message) {
+        try {   
+            // Set timeout to 5000 milliseconds (5 seconds)
+            const response = await axios.get('(your api url here)', { timeout: 5000 });
             const data = response.data;
             const dataString = JSON.stringify(data);
             // extract the number using a regular expression
