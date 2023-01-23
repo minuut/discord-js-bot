@@ -13,8 +13,8 @@ module.exports = {
             const dataString = JSON.stringify(data);
             // extract the number using a regular expression
             const number = dataString.match(/\d+/);  
-            const customString = 'users are currently online';
-            const finalString = `The online count is ${number} ${customString}`;
+            const customString = 'users currently online';
+            const finalString = `There are ${number} ${customString}`;
             await message.channel.send(finalString);
         } catch (error) {
             console.error(error);
