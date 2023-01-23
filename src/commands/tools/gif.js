@@ -8,7 +8,7 @@ module.exports = {
 
     async execute(interaction) {
         try {
-            // Replace YOUR_API_KEY with your actual Giphy API key
+            // Replace ! with your actual Giphy API key
             const apiKey = '!';
             const response = await axios.get(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`);
             const gifUrl = response.data.data.images.original.url;
