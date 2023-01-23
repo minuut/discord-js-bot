@@ -8,11 +8,9 @@ module.exports = {
 
     async execute(message) {
         try {   
-            // Set timeout to 5000 milliseconds (5 seconds)
             const response = await axios.get('(your api url here)', { timeout: 5000 });
             const data = response.data;
             const dataString = JSON.stringify(data);
-            // extract the number using a regular expression
             const number = dataString.match(/\d+/);  
             const customString = 'users currently online';
             const finalString = `There are ${number} ${customString}`;
