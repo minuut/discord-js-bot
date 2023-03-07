@@ -4,7 +4,7 @@ const axios = require('axios');
 module.exports = {
     data: new SlashCommandBuilder() 
         .setName('online')
-        .setDescription('Return online count from ProHotel API'),
+        .setDescription('Return online count from website API'),
 
         async execute(interaction) {
             try {   
